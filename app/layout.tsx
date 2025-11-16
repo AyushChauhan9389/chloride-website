@@ -1,5 +1,6 @@
 import { Archivo_Black, Space_Grotesk } from "next/font/google";
- 
+import "./globals.css";
+
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
   weight: "400",
