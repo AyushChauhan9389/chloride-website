@@ -35,7 +35,7 @@ export default function Home() {
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse border border-foreground" />
                     <Text as="h3" className="font-bold text-primary-foreground text-lg">
-                      Claude Code
+                      Chloride 🧪
                     </Text>
                   </div>
                 </div>
@@ -123,24 +123,24 @@ export default function Home() {
             >
               <span className="flex items-center gap-2 border-0">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse border border-foreground" />
-                Built for developers
+                Built for Windows
               </span>
             </Badge>
 
             <div className="relative">
               <Text as="h1" className="leading-tight">
-                AI-powered coding
+                File management
                 <br />
                 <span className="relative inline-block">
-                  at your command
+                  made simple
                   <div className="absolute -bottom-2 left-0 right-0 h-3 bg-primary/30 -z-10 -rotate-1" />
                 </span>
               </Text>
             </div>
 
             <Text as="p" className="text-lg text-muted-foreground max-w-lg">
-              Interactive CLI tool that helps you write, understand, and improve
-              code with AI assistance. Work faster and smarter.
+              A powerful and lightweight CLI tool for Windows. Manage your files
+              effortlessly with simple commands. Fast, reliable, and built with Rust.
             </Text>
 
             {/* CTA Buttons */}
@@ -151,7 +151,7 @@ export default function Home() {
                 className="border-foreground group"
               >
                 <span className="flex items-center gap-2">
-                  Get Claude Code
+                  Download Chloride
                   <span className="group-hover:translate-x-1 transition-transform">
                     →
                   </span>
@@ -162,31 +162,31 @@ export default function Home() {
                 size="lg"
                 className="border-foreground hover:bg-secondary hover:text-secondary-foreground"
               >
-                Documentation
+                View on GitHub
               </Button>
             </div>
 
             {/* Social proof / stats */}
             <div className="flex gap-4 flex-wrap pt-4">
               <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
-                <span className="text-xl">⭐</span>
+                <span className="text-xl">⚡</span>
                 <div>
-                  <div className="font-bold text-sm">10K+</div>
-                  <div className="text-xs text-muted-foreground">Stars</div>
+                  <div className="font-bold text-sm">Blazing</div>
+                  <div className="text-xs text-muted-foreground">Fast</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
-                <span className="text-xl">👥</span>
+                <span className="text-xl">🦀</span>
                 <div>
-                  <div className="font-bold text-sm">50K+</div>
-                  <div className="text-xs text-muted-foreground">Users</div>
+                  <div className="font-bold text-sm">Rust</div>
+                  <div className="text-xs text-muted-foreground">Powered</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
-                <span className="text-xl">🚀</span>
+                <span className="text-xl">💻</span>
                 <div>
-                  <div className="font-bold text-sm">99.9%</div>
-                  <div className="text-xs text-muted-foreground">Uptime</div>
+                  <div className="font-bold text-sm">Windows</div>
+                  <div className="text-xs text-muted-foreground">Native</div>
                 </div>
               </div>
             </div>
@@ -211,9 +211,9 @@ export default function Home() {
               </div>
               <div className="p-4 flex items-center justify-between gap-4 bg-card">
                 <div className="flex items-center gap-2 flex-1">
-                  <span className="text-primary font-mono text-sm">$</span>
+                  <span className="text-primary font-mono text-sm">></span>
                   <code className="text-sm font-mono flex-1">
-                    npm install -g @anthropic/claude-code
+                    winget install chloride
                   </code>
                 </div>
                 <Button
@@ -221,7 +221,7 @@ export default function Home() {
                   size="sm"
                   className="border-foreground"
                   onClick={() =>
-                    copyToClipboard("npm install -g @anthropic/claude-code", 0)
+                    copyToClipboard("winget install chloride", 0)
                   }
                 >
                   {copiedIndex === 0 ? "✓" : "Copy"}
@@ -232,30 +232,30 @@ export default function Home() {
             {/* Feature highlights */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
-                <div className="text-2xl mb-2">⚡</div>
-                <div className="font-bold text-sm">Lightning Fast</div>
+                <div className="text-2xl mb-2">📁</div>
+                <div className="font-bold text-sm">Simple Commands</div>
                 <div className="text-xs text-muted-foreground">
-                  Instant responses
+                  Easy file operations
                 </div>
               </div>
               <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
-                <div className="text-2xl mb-2">🔒</div>
-                <div className="font-bold text-sm">Secure</div>
+                <div className="text-2xl mb-2">🔄</div>
+                <div className="font-bold text-sm">Dual Names</div>
                 <div className="text-xs text-muted-foreground">
-                  Privacy first
+                  chloride or cl
                 </div>
               </div>
               <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
-                <div className="text-2xl mb-2">🎯</div>
-                <div className="font-bold text-sm">Context Aware</div>
+                <div className="text-2xl mb-2">📦</div>
+                <div className="font-bold text-sm">MSI Installer</div>
                 <div className="text-xs text-muted-foreground">
-                  Understands code
+                  Windows native
                 </div>
               </div>
               <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
-                <div className="text-2xl mb-2">🛠️</div>
-                <div className="font-bold text-sm">Multi-Language</div>
-                <div className="text-xs text-muted-foreground">All platforms</div>
+                <div className="text-2xl mb-2">🦀</div>
+                <div className="font-bold text-sm">Rust Built</div>
+                <div className="text-xs text-muted-foreground">Fast & reliable</div>
               </div>
             </div>
           </div>
@@ -267,10 +267,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
             <Text as="h2" className="mb-4">
-              Powerful features for developers
+              Powerful features for Windows users
             </Text>
             <Text as="p" className="text-muted-foreground text-lg">
-              Everything you need to code smarter and faster
+              Everything you need to manage files efficiently
             </Text>
           </div>
 
@@ -278,12 +278,51 @@ export default function Home() {
             <Card className="bg-card hover:shadow-lg transition-all">
               <Card.Header>
                 <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
-                  🚀
+                  📁
+                </div>
+                <Card.Title>Simple Commands</Card.Title>
+                <Card.Description>
+                  Easy-to-use file operations with intuitive command syntax.
+                  Create, remove, and manage files effortlessly.
+                </Card.Description>
+              </Card.Header>
+            </Card>
+
+            <Card className="bg-card hover:shadow-lg transition-all">
+              <Card.Header>
+                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
+                  🔄
+                </div>
+                <Card.Title>Dual Command Names</Card.Title>
+                <Card.Description>
+                  Use either chloride or cl for convenience. Short commands for
+                  power users, full names for clarity.
+                </Card.Description>
+              </Card.Header>
+            </Card>
+
+            <Card className="bg-card hover:shadow-lg transition-all">
+              <Card.Header>
+                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
+                  💻
+                </div>
+                <Card.Title>Windows Integration</Card.Title>
+                <Card.Description>
+                  Native MSI installer with automatic PATH configuration. Seamless
+                  integration with your Windows environment.
+                </Card.Description>
+              </Card.Header>
+            </Card>
+
+            <Card className="bg-card hover:shadow-lg transition-all">
+              <Card.Header>
+                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
+                  ⚡
                 </div>
                 <Card.Title>Lightning Fast</Card.Title>
                 <Card.Description>
-                  Get instant AI-powered suggestions and code completions as you
-                  type
+                  Built with Rust for optimal performance. Execute file operations
+                  in milliseconds with minimal overhead.
                 </Card.Description>
               </Card.Header>
             </Card>
@@ -291,49 +330,12 @@ export default function Home() {
             <Card className="bg-card hover:shadow-lg transition-all">
               <Card.Header>
                 <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
-                  🔍
+                  🦀
                 </div>
-                <Card.Title>Code Understanding</Card.Title>
+                <Card.Title>Rust Powered</Card.Title>
                 <Card.Description>
-                  Explore and understand complex codebases with AI-powered
-                  analysis
-                </Card.Description>
-              </Card.Header>
-            </Card>
-
-            <Card className="bg-card hover:shadow-lg transition-all">
-              <Card.Header>
-                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
-                  ✨
-                </div>
-                <Card.Title>Smart Refactoring</Card.Title>
-                <Card.Description>
-                  Automatically improve code quality with intelligent
-                  refactoring suggestions
-                </Card.Description>
-              </Card.Header>
-            </Card>
-
-            <Card className="bg-card hover:shadow-lg transition-all">
-              <Card.Header>
-                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
-                  🛠️
-                </div>
-                <Card.Title>Multi-Language</Card.Title>
-                <Card.Description>
-                  Support for all major programming languages and frameworks
-                </Card.Description>
-              </Card.Header>
-            </Card>
-
-            <Card className="bg-card hover:shadow-lg transition-all">
-              <Card.Header>
-                <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
-                  🔒
-                </div>
-                <Card.Title>Secure & Private</Card.Title>
-                <Card.Description>
-                  Your code stays yours. Built with enterprise-grade security
+                  Memory-safe and reliable. Built with modern Rust for maximum
+                  performance and safety.
                 </Card.Description>
               </Card.Header>
             </Card>
@@ -343,9 +345,10 @@ export default function Home() {
                 <div className="w-12 h-12 bg-primary rounded mb-4 flex items-center justify-center text-2xl">
                   🎯
                 </div>
-                <Card.Title>Context Aware</Card.Title>
+                <Card.Title>Lightweight</Card.Title>
                 <Card.Description>
-                  AI that understands your project structure and coding style
+                  Minimal resource usage with maximum functionality. No bloat, just
+                  essential file management features.
                 </Card.Description>
               </Card.Header>
             </Card>
@@ -353,49 +356,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Platform Section with Tabs */}
+      {/* Installation Section with Tabs */}
       <section id="platform" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <Text as="h2" className="mb-4">
-            Available everywhere you code
+            Multiple installation options
           </Text>
           <Text as="p" className="text-muted-foreground text-lg">
-            Use Claude Code in your favorite development environment
+            Choose the installation method that works best for you
           </Text>
         </div>
 
         <Tabs>
           <TabsTriggerList className="justify-center mb-8">
-            <TabsTrigger className="rounded">Terminal</TabsTrigger>
-            <TabsTrigger className="rounded">VS Code</TabsTrigger>
-            <TabsTrigger className="rounded">Web</TabsTrigger>
+            <TabsTrigger className="rounded">MSI Installer</TabsTrigger>
+            <TabsTrigger className="rounded">Portable</TabsTrigger>
+            <TabsTrigger className="rounded">Build from Source</TabsTrigger>
           </TabsTriggerList>
 
           <TabsPanels>
             <TabsContent className="rounded bg-card">
               <div className="space-y-4">
-                <Text as="h3">Command Line Interface</Text>
+                <Text as="h3">MSI Installer (Recommended)</Text>
                 <Text as="p" className="text-muted-foreground">
-                  Work directly from your terminal with our powerful CLI tool.
-                  Get AI assistance without leaving your workflow.
+                  Native Windows installer with automatic PATH configuration.
+                  Perfect for most users who want a simple setup experience.
                 </Text>
                 <div className="bg-secondary/10 border-2 border-border rounded p-6 font-mono text-sm">
-                  <div className="text-primary mb-2">$ claude-code</div>
-                  <div className="text-muted-foreground">
-                    Welcome to Claude Code! 🚀
+                  <div className="text-muted-foreground mb-2">
+                    1. Download chloride-installer.msi
                   </div>
-                  <div className="text-muted-foreground">
-                    Type &apos;help&apos; to see available commands
+                  <div className="text-muted-foreground mb-2">
+                    2. Run the installer
                   </div>
-                  <div className="mt-4 text-primary">
-                    &gt; analyze src/components
+                  <div className="text-muted-foreground mb-2">
+                    3. Restart your terminal
                   </div>
+                  <div className="text-primary mt-4">&gt; chloride --help</div>
                   <div className="text-foreground mt-2">
-                    Analyzing codebase...
+                    Chloride - File Management CLI 🧪
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button variant="default">Install CLI</Button>
+                  <Button variant="default">Download MSI</Button>
                   <Button variant="outline">View Docs</Button>
                 </div>
               </div>
@@ -403,51 +406,56 @@ export default function Home() {
 
             <TabsContent className="rounded bg-card">
               <div className="space-y-4">
-                <Text as="h3">VS Code Extension</Text>
+                <Text as="h3">Portable Executable</Text>
                 <Text as="p" className="text-muted-foreground">
-                  Seamlessly integrated into Visual Studio Code. Get inline
-                  suggestions and AI-powered assistance right in your editor.
+                  Standalone executable that requires no installation. Download,
+                  rename, and place in your PATH manually.
                 </Text>
                 <div className="bg-secondary/10 border-2 border-border rounded p-6">
                   <div className="space-y-3">
                     <Badge variant="surface" size="sm">
-                      IntelliSense Integration
+                      No Installation Required
                     </Badge>
                     <Badge variant="surface" size="sm">
-                      Real-time Suggestions
+                      Manual PATH Setup
                     </Badge>
                     <Badge variant="surface" size="sm">
-                      Code Actions
+                      Portable & Flexible
                     </Badge>
                     <Badge variant="surface" size="sm">
-                      Inline Chat
+                      Single Executable
                     </Badge>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button variant="default">Install Extension</Button>
-                  <Button variant="outline">Learn More</Button>
+                  <Button variant="default">Download .exe</Button>
+                  <Button variant="outline">Setup Guide</Button>
                 </div>
               </div>
             </TabsContent>
 
             <TabsContent className="rounded bg-card">
               <div className="space-y-4">
-                <Text as="h3">Web Interface</Text>
+                <Text as="h3">Build from Source</Text>
                 <Text as="p" className="text-muted-foreground">
-                  Access Claude Code from anywhere with our web interface. No
-                  installation required, perfect for quick tasks and
-                  collaboration.
+                  For developers who want to build Chloride themselves or
+                  contribute to the project. Requires Rust toolchain.
                 </Text>
-                <div className="bg-secondary/10 border-2 border-border rounded p-6 text-center">
-                  <div className="text-4xl mb-4">🌐</div>
-                  <Text as="p" className="text-muted-foreground">
-                    Start coding in your browser instantly
-                  </Text>
+                <div className="bg-secondary/10 border-2 border-border rounded p-6 text-left font-mono text-sm">
+                  <div className="text-primary mb-2">
+                    &gt; git clone https://github.com/chloride-team/chloride
+                  </div>
+                  <div className="text-primary mb-2">&gt; cd chloride</div>
+                  <div className="text-primary mb-2">
+                    &gt; cargo build --release
+                  </div>
+                  <div className="text-muted-foreground mt-4">
+                    Binary will be in target/release/
+                  </div>
                 </div>
                 <div className="flex gap-4">
-                  <Button variant="default">Try Web Version</Button>
-                  <Button variant="outline">Documentation</Button>
+                  <Button variant="default">View on GitHub</Button>
+                  <Button variant="outline">Contribution Guide</Button>
                 </div>
               </div>
             </TabsContent>
@@ -460,7 +468,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
             <Text as="h2" className="mb-4">
-              Built for every developer workflow
+              Common file operations made easy
             </Text>
           </div>
 
@@ -472,11 +480,11 @@ export default function Home() {
                 </div>
                 <div>
                   <Text as="h4" className="mb-2">
-                    Debug Faster
+                    Create Files Quickly
                   </Text>
                   <Text as="p" className="text-muted-foreground">
-                    Identify and fix bugs with AI-powered analysis and
-                    suggestions
+                    Use chloride touch to create single or multiple files
+                    instantly with simple commands
                   </Text>
                 </div>
               </div>
@@ -487,10 +495,11 @@ export default function Home() {
                 </div>
                 <div>
                   <Text as="h4" className="mb-2">
-                    Learn New Languages
+                    Remove with Confidence
                   </Text>
                   <Text as="p" className="text-muted-foreground">
-                    Get explanations and examples in any programming language
+                    Delete files safely with confirmation prompts and batch
+                    removal support
                   </Text>
                 </div>
               </div>
@@ -503,10 +512,11 @@ export default function Home() {
                 </div>
                 <div>
                   <Text as="h4" className="mb-2">
-                    Write Tests
+                    Batch Operations
                   </Text>
                   <Text as="p" className="text-muted-foreground">
-                    Generate comprehensive test suites automatically
+                    Perform operations on multiple files at once using patterns
+                    and wildcards
                   </Text>
                 </div>
               </div>
@@ -517,10 +527,11 @@ export default function Home() {
                 </div>
                 <div>
                   <Text as="h4" className="mb-2">
-                    Refactor Legacy Code
+                    Interactive Dashboard
                   </Text>
                   <Text as="p" className="text-muted-foreground">
-                    Modernize and improve existing codebases with confidence
+                    Run chloride without arguments to see the interactive
+                    dashboard and explore features
                   </Text>
                 </div>
               </div>
@@ -534,21 +545,20 @@ export default function Home() {
         <Card className="bg-primary text-primary-foreground">
           <Card.Content className="text-center py-16">
             <Text as="h2" className="mb-6">
-              Ready to transform your coding workflow?
+              Ready to simplify your file management?
             </Text>
             <Text
               as="p"
               className="text-lg mb-8 max-w-2xl mx-auto opacity-90"
             >
-              Join thousands of developers who are coding smarter with Claude
-              Code
+              Join Windows users who are managing files faster with Chloride 🧪
             </Text>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button variant="secondary" size="lg">
-                Get Started Free
+                Download Now
               </Button>
               <Button variant="outline" size="lg" className="bg-transparent">
-                Contact Sales
+                View on GitHub
               </Button>
             </div>
           </Card.Content>
@@ -568,7 +578,7 @@ export default function Home() {
                   Features
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  Pricing
+                  Releases
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
                   Documentation
@@ -578,17 +588,17 @@ export default function Home() {
 
             <div>
               <Text as="h4" className="mb-4">
-                Company
+                Community
               </Text>
               <div className="space-y-2">
                 <Text as="a" href="#" className="block text-sm">
-                  About
+                  GitHub
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  Blog
+                  Discussions
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  Careers
+                  Issues
                 </Text>
               </div>
             </div>
@@ -599,10 +609,10 @@ export default function Home() {
               </Text>
               <div className="space-y-2">
                 <Text as="a" href="#" className="block text-sm">
-                  Tutorials
+                  Getting Started
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  API Reference
+                  Wiki
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
                   Community
@@ -616,13 +626,13 @@ export default function Home() {
               </Text>
               <div className="space-y-2">
                 <Text as="a" href="#" className="block text-sm">
-                  Privacy
+                  MIT License
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  Terms
+                  Contributing
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
-                  Security
+                  Code of Conduct
                 </Text>
               </div>
             </div>
@@ -630,7 +640,7 @@ export default function Home() {
 
           <div className="border-t-2 border-border pt-8 text-center">
             <Text as="p" className="text-sm text-muted-foreground">
-              © 2024 Claude Code. All rights reserved.
+              © 2024 Chloride Team. Made with ❤️ and Rust 🦀
             </Text>
           </div>
         </div>
