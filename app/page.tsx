@@ -25,27 +25,62 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b-2 border-border bg-card">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Text as="h3" className="font-bold">
-              Claude Code
-            </Text>
-            <div className="hidden md:flex gap-6">
-              <Text as="a" href="#features" className="text-sm">
-                Features
-              </Text>
-              <Text as="a" href="#platform" className="text-sm">
-                Platform
-              </Text>
-              <Text as="a" href="#docs" className="text-sm">
-                Docs
-              </Text>
+      <nav className="sticky top-0 z-50 bg-background border-b-4 border-border shadow-md">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo Section */}
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <div className="bg-primary border-2 border-border rounded px-4 py-2 shadow-sm hover:shadow transition-all hover:translate-y-0.5 active:translate-y-1">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <Text as="h3" className="font-bold text-primary-foreground">
+                      Claude Code
+                    </Text>
+                  </div>
+                </div>
+              </div>
+              <Badge variant="outline" size="sm" className="hidden lg:block">
+                v1.0
+              </Badge>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-3">
+              <Button variant="link" size="sm" asChild>
+                <a href="#features">Features</a>
+              </Button>
+              <Button variant="link" size="sm" asChild>
+                <a href="#platform">Platform</a>
+              </Button>
+              <Button variant="link" size="sm" asChild>
+                <a href="#docs">Docs</a>
+              </Button>
+
+              <div className="w-px h-6 bg-border mx-2" />
+
+              <Button variant="outline" size="sm">
+                Sign In
+              </Button>
+              <Button variant="default" size="sm" className="font-bold">
+                Get Started →
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <Button variant="outline" size="sm">
+                Menu
+              </Button>
             </div>
           </div>
-          <Button variant="default" size="md">
-            Get Started
-          </Button>
+
+          {/* Decorative bottom border pattern */}
+          <div className="flex gap-1 mt-4">
+            <div className="h-1 w-12 bg-primary rounded-full" />
+            <div className="h-1 w-8 bg-secondary rounded-full" />
+            <div className="h-1 w-16 bg-accent rounded-full" />
+          </div>
         </div>
       </nav>
 
