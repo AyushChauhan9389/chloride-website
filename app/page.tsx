@@ -212,7 +212,7 @@ export default function Home() {
               </div>
               <div className="p-4 flex items-center justify-between gap-4 bg-card">
                 <div className="flex items-center gap-2 flex-1">
-                  <span className="text-primary font-mono text-sm">></span>
+                  <span className="text-primary font-mono text-sm"></span>
                   <code className="text-sm font-mono flex-1">
                     winget install chloride
                   </code>
@@ -575,13 +575,13 @@ export default function Home() {
                 Product
               </Text>
               <div className="space-y-2">
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Features
                 </Text>
                 <Text as="a" href="#" className="block text-sm">
                   Releases
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Documentation
                 </Text>
               </div>
@@ -592,13 +592,13 @@ export default function Home() {
                 Community
               </Text>
               <div className="space-y-2">
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   GitHub
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Discussions
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Issues
                 </Text>
               </div>
@@ -609,13 +609,13 @@ export default function Home() {
                 Resources
               </Text>
               <div className="space-y-2">
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a"  className="block text-sm">
                   Getting Started
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a"  className="block text-sm">
                   Wiki
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Community
                 </Text>
               </div>
@@ -626,17 +626,18 @@ export default function Home() {
                 Legal
               </Text>
               <div className="space-y-2">
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   MIT License
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Contributing
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Code of Conduct
                 </Text>
               </div>
             </div>
+
           </div>
 
           <div className="border-t-2 border-border pt-8 text-center">
