@@ -75,15 +75,16 @@ export default function Home() {
 
               <div className="w-px h-8 bg-foreground mx-1" />
 
-              <Button variant="outline" size="sm" className="border-foreground">
-                Sign In
+              <Button variant="outline" size="sm" className="border-foreground" asChild>
+                <a href="/login">Sign In</a>
               </Button>
               <Button
                 variant="default"
                 size="sm"
                 className="font-bold border-foreground"
+                asChild
               >
-                Get Started →
+                <a href="/signup">Get Started →</a>
               </Button>
             </div>
 
