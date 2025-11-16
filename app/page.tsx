@@ -25,61 +25,82 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background border-b-4 border-border shadow-md">
+      <nav className="sticky top-0 z-50 bg-card border-b-4 border-foreground shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="bg-primary border-2 border-border rounded px-4 py-2 shadow-sm hover:shadow transition-all hover:translate-y-0.5 active:translate-y-1">
+                <div className="bg-primary border-2 border-foreground rounded px-4 py-2 shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 active:translate-y-0">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <Text as="h3" className="font-bold text-primary-foreground">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse border border-foreground" />
+                    <Text as="h3" className="font-bold text-primary-foreground text-lg">
                       Claude Code
                     </Text>
                   </div>
                 </div>
               </div>
-              <Badge variant="outline" size="sm" className="hidden lg:block">
+              <Badge
+                variant="solid"
+                size="sm"
+                className="hidden lg:block border-2 border-foreground"
+              >
                 v1.0
               </Badge>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-3">
-              <Button variant="link" size="sm" asChild>
-                <a href="#features">Features</a>
-              </Button>
-              <Button variant="link" size="sm" asChild>
-                <a href="#platform">Platform</a>
-              </Button>
-              <Button variant="link" size="sm" asChild>
-                <a href="#docs">Docs</a>
-              </Button>
+            <div className="hidden md:flex items-center gap-2">
+              {/* Navigation Links with unique styling */}
+              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded p-1">
+                <a
+                  href="#features"
+                  className="px-3 py-1.5 rounded font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-all border-2 border-transparent hover:border-foreground"
+                >
+                  Features
+                </a>
+                <a
+                  href="#platform"
+                  className="px-3 py-1.5 rounded font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-all border-2 border-transparent hover:border-foreground"
+                >
+                  Platform
+                </a>
+                <a
+                  href="#docs"
+                  className="px-3 py-1.5 rounded font-medium text-sm hover:bg-primary hover:text-primary-foreground transition-all border-2 border-transparent hover:border-foreground"
+                >
+                  Docs
+                </a>
+              </div>
 
-              <div className="w-px h-6 bg-border mx-2" />
+              <div className="w-px h-8 bg-foreground mx-1" />
 
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-foreground">
                 Sign In
               </Button>
-              <Button variant="default" size="sm" className="font-bold">
+              <Button
+                variant="default"
+                size="sm"
+                className="font-bold border-foreground"
+              >
                 Get Started →
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-foreground">
                 Menu
               </Button>
             </div>
           </div>
 
           {/* Decorative bottom border pattern */}
-          <div className="flex gap-1 mt-4">
-            <div className="h-1 w-12 bg-primary rounded-full" />
-            <div className="h-1 w-8 bg-secondary rounded-full" />
-            <div className="h-1 w-16 bg-accent rounded-full" />
+          <div className="flex gap-2 mt-4">
+            <div className="h-1.5 flex-1 max-w-[60px] bg-primary rounded-full border border-foreground" />
+            <div className="h-1.5 flex-1 max-w-[40px] bg-secondary rounded-full border border-foreground" />
+            <div className="h-1.5 flex-1 max-w-[80px] bg-accent rounded-full border border-foreground" />
+            <div className="h-1.5 flex-1 max-w-[30px] bg-destructive rounded-full border border-foreground" />
           </div>
         </div>
       </nav>
