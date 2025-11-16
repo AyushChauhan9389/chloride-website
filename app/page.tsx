@@ -106,100 +106,51 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-6 py-20 md:py-32 overflow-hidden">
+      <section className="relative max-w-7xl mx-auto px-6 py-16 md:py-20 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 border-2 border-primary rounded-full -z-10" />
-        <div className="absolute top-40 right-20 w-32 h-32 bg-accent/10 border-2 border-accent rounded -z-10 rotate-12" />
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-accent/10 border-2 border-accent rounded -z-10 rotate-12" />
+        <div className="absolute bottom-10 left-1/4 w-16 h-16 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
 
-        <div className="text-center space-y-8">
-          {/* Status Badge with enhanced styling */}
-          <div className="flex justify-center">
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-6">
             <Badge
               variant="surface"
-              size="lg"
-              className="border-2 border-foreground shadow-md animate-in fade-in slide-in-from-top-4 duration-500"
+              size="md"
+              className="border-2 border-foreground shadow-md"
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 Built for developers
               </span>
             </Badge>
-          </div>
 
-          {/* Hero Title with enhanced styling */}
-          <div className="relative inline-block">
-            <Text
-              as="h1"
-              className="max-w-4xl mx-auto leading-tight animate-in fade-in slide-in-from-bottom-6 duration-700"
-            >
-              AI-powered coding
-              <br />
-              <span className="relative inline-block">
-                at your command
-                <div className="absolute -bottom-2 left-0 right-0 h-3 bg-primary/30 -z-10 -rotate-1" />
-              </span>
-            </Text>
-          </div>
-
-          {/* Description with box styling */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-card border-2 border-foreground rounded-lg p-6 shadow-md animate-in fade-in slide-in-from-bottom-8 duration-1000">
-              <Text as="p" className="text-lg md:text-xl">
-                Claude Code is an interactive CLI tool that helps you write,
-                understand, and improve code with AI assistance. Work faster and
-                smarter with intelligent code completion and analysis.
+            <div className="relative">
+              <Text as="h1" className="leading-tight">
+                AI-powered coding
+                <br />
+                <span className="relative inline-block">
+                  at your command
+                  <div className="absolute -bottom-2 left-0 right-0 h-3 bg-primary/30 -z-10 -rotate-1" />
+                </span>
               </Text>
             </div>
-          </div>
 
-          {/* Installation Commands with enhanced styling */}
-          <div className="max-w-3xl mx-auto mt-12 space-y-6 animate-in fade-in slide-in-from-bottom-10 duration-1000">
-            <div className="relative">
-              {/* Terminal-style command box */}
-              <Card className="border-foreground border-2 bg-card shadow-lg">
-                <div className="bg-secondary border-b-2 border-foreground px-4 py-2 flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-destructive border border-foreground" />
-                    <div className="w-3 h-3 rounded-full bg-accent border border-foreground" />
-                    <div className="w-3 h-3 rounded-full bg-green-500 border border-foreground" />
-                  </div>
-                  <Text as="p" className="text-xs text-secondary-foreground font-mono">
-                    terminal
-                  </Text>
-                </div>
-                <div className="p-4 flex items-center justify-between gap-4 bg-card">
-                  <div className="flex items-center gap-2 flex-1">
-                    <span className="text-primary font-mono text-sm">$</span>
-                    <code className="text-sm font-mono flex-1">
-                      npm install -g @anthropic/claude-code
-                    </code>
-                  </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-foreground"
-                    onClick={() =>
-                      copyToClipboard(
-                        "npm install -g @anthropic/claude-code",
-                        0,
-                      )
-                    }
-                  >
-                    {copiedIndex === 0 ? "✓ Copied!" : "Copy"}
-                  </Button>
-                </div>
-              </Card>
-            </div>
+            <Text as="p" className="text-lg text-muted-foreground max-w-lg">
+              Interactive CLI tool that helps you write, understand, and improve
+              code with AI assistance. Work faster and smarter.
+            </Text>
 
-            {/* CTA Buttons with enhanced styling */}
-            <div className="flex gap-4 justify-center flex-wrap pt-4">
+            {/* CTA Buttons */}
+            <div className="flex gap-3 flex-wrap pt-2">
               <Button
                 variant="default"
                 size="lg"
-                className="border-foreground group relative overflow-hidden"
+                className="border-foreground group"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="flex items-center gap-2">
                   Get Claude Code
                   <span className="group-hover:translate-x-1 transition-transform">
                     →
@@ -211,32 +162,100 @@ export default function Home() {
                 size="lg"
                 className="border-foreground hover:bg-secondary hover:text-secondary-foreground"
               >
-                View Documentation
+                Documentation
               </Button>
             </div>
 
             {/* Social proof / stats */}
-            <div className="flex gap-6 justify-center flex-wrap pt-8">
-              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-4 py-2">
-                <span className="text-2xl">⭐</span>
-                <div className="text-left">
+            <div className="flex gap-4 flex-wrap pt-4">
+              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
+                <span className="text-xl">⭐</span>
+                <div>
                   <div className="font-bold text-sm">10K+</div>
                   <div className="text-xs text-muted-foreground">Stars</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-4 py-2">
-                <span className="text-2xl">👥</span>
-                <div className="text-left">
+              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
+                <span className="text-xl">👥</span>
+                <div>
                   <div className="font-bold text-sm">50K+</div>
-                  <div className="text-xs text-muted-foreground">Developers</div>
+                  <div className="text-xs text-muted-foreground">Users</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-4 py-2">
-                <span className="text-2xl">🚀</span>
-                <div className="text-left">
+              <div className="flex items-center gap-2 bg-muted/30 border-2 border-foreground rounded px-3 py-2">
+                <span className="text-xl">🚀</span>
+                <div>
                   <div className="font-bold text-sm">99.9%</div>
                   <div className="text-xs text-muted-foreground">Uptime</div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Terminal */}
+          <div className="space-y-4">
+            {/* Terminal-style command box */}
+            <Card className="border-foreground border-2 bg-card shadow-lg">
+              <div className="bg-secondary border-b-2 border-foreground px-4 py-2 flex items-center gap-2">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-destructive border border-foreground" />
+                  <div className="w-3 h-3 rounded-full bg-accent border border-foreground" />
+                  <div className="w-3 h-3 rounded-full bg-green-500 border border-foreground" />
+                </div>
+                <Text
+                  as="p"
+                  className="text-xs text-secondary-foreground font-mono"
+                >
+                  terminal
+                </Text>
+              </div>
+              <div className="p-4 flex items-center justify-between gap-4 bg-card">
+                <div className="flex items-center gap-2 flex-1">
+                  <span className="text-primary font-mono text-sm">$</span>
+                  <code className="text-sm font-mono flex-1">
+                    npm install -g @anthropic/claude-code
+                  </code>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-foreground"
+                  onClick={() =>
+                    copyToClipboard("npm install -g @anthropic/claude-code", 0)
+                  }
+                >
+                  {copiedIndex === 0 ? "✓" : "Copy"}
+                </Button>
+              </div>
+            </Card>
+
+            {/* Feature highlights */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
+                <div className="text-2xl mb-2">⚡</div>
+                <div className="font-bold text-sm">Lightning Fast</div>
+                <div className="text-xs text-muted-foreground">
+                  Instant responses
+                </div>
+              </div>
+              <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
+                <div className="text-2xl mb-2">🔒</div>
+                <div className="font-bold text-sm">Secure</div>
+                <div className="text-xs text-muted-foreground">
+                  Privacy first
+                </div>
+              </div>
+              <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
+                <div className="text-2xl mb-2">🎯</div>
+                <div className="font-bold text-sm">Context Aware</div>
+                <div className="text-xs text-muted-foreground">
+                  Understands code
+                </div>
+              </div>
+              <div className="bg-card border-2 border-foreground rounded p-4 shadow-sm">
+                <div className="text-2xl mb-2">🛠️</div>
+                <div className="font-bold text-sm">Multi-Language</div>
+                <div className="text-xs text-muted-foreground">All platforms</div>
               </div>
             </div>
           </div>
