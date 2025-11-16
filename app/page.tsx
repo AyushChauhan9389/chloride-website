@@ -119,9 +119,9 @@ export default function Home() {
             <Badge
               variant="surface"
               size="md"
-              className="shadow-md"
+              className="shadow-md border-0 [&>*]:border-0"
             >
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 border-0">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse border border-foreground" />
                 Built for developers
               </span>
