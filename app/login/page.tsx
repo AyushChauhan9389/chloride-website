@@ -35,8 +35,8 @@ export default function LoginPage() {
         // Store token in localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
-        // Redirect to dashboard or home
-        window.location.href = "/";
+        // Redirect to dashboard
+        window.location.href = "/dashboard";
       } else {
         setError(data.message || "Login failed. Please try again.");
       }

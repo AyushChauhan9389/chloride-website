@@ -54,9 +54,9 @@ export default function SignupPage() {
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
         setSuccess(true);
-        // Redirect to dashboard or home after short delay
+        // Redirect to dashboard after short delay
         setTimeout(() => {
-          window.location.href = "/";
+          window.location.href = "/dashboard";
         }, 1500);
       } else {
         setError(data.message || "Signup failed. Please try again.");
