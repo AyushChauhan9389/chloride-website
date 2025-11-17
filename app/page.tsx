@@ -12,6 +12,7 @@ import {
   TabsTriggerList,
 } from "@/components/retroui/Tab";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -76,7 +77,7 @@ export default function Home() {
               <div className="w-px h-8 bg-foreground mx-1" />
 
               <Button variant="outline" size="sm" className="border-foreground" asChild>
-                <a href="/login">Sign In</a>
+                <Link href="/login">Sign In</Link>
               </Button>
               <Button
                 variant="default"
@@ -578,7 +579,7 @@ export default function Home() {
                 <Text as="a" className="block text-sm">
                   Features
                 </Text>
-                <Text as="a" href="#" className="block text-sm">
+                <Text as="a" className="block text-sm">
                   Releases
                 </Text>
                 <Text as="a" className="block text-sm">
