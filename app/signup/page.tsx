@@ -38,7 +38,7 @@ export default function SignupPage() {
     }
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+      const apiUrl = process.env.NEXT_PUBLIC_AUTH_API_URL || "http://localhost:8082";
       const response = await fetch(`${apiUrl}/api/auth/signup`, {
         method: "POST",
         headers: {
