@@ -63,35 +63,63 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background p-6">
-      {/* Decorative background elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 border-2 border-primary rounded-full -z-10" />
-      <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent/10 border-2 border-accent rounded -z-10 rotate-12" />
-      <div className="absolute top-1/2 right-10 w-24 h-24 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
-
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-8 flex items-center justify-between">
-          <div>
-            <div className="inline-block bg-primary border-2 border-foreground rounded px-6 py-3 shadow-md mb-4">
-              <Text as="h1" className="flex items-center gap-2 text-primary-foreground">
-                Chloride Dashboard 🧪
-              </Text>
+    <div className="min-h-screen bg-background">
+      {/* Custom Header */}
+      <header className="border-b-2 border-foreground bg-card sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center gap-4">
+              <div className="bg-primary border-2 border-foreground rounded px-4 py-2 shadow-md">
+                <Text as="h1" className="text-primary-foreground text-lg">
+                  Chloride 🧪
+                </Text>
+              </div>
+              <Badge variant="surface" size="sm" className="border-foreground">
+                Dashboard
+              </Badge>
             </div>
+
+            {/* Nav Actions */}
+            <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => router.push("/")}
+                className="border-foreground"
+              >
+                ← Home
+              </Button>
+              <Button
+                variant="destructive"
+                size="sm"
+                onClick={handleLogout}
+                className="border-foreground"
+              >
+                Logout
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="p-6">
+        {/* Decorative background elements */}
+        <div className="absolute top-40 left-10 w-32 h-32 bg-primary/10 border-2 border-primary rounded-full -z-10" />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-accent/10 border-2 border-accent rounded -z-10 rotate-12" />
+        <div className="absolute top-1/2 right-10 w-24 h-24 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
+
+        <div className="max-w-6xl mx-auto">
+          {/* Welcome Section */}
+          <div className="mb-8">
+            <Text as="h2" className="text-2xl font-bold mb-2">
+              Welcome back!
+            </Text>
             <Text as="p" className="text-muted-foreground">
-              Welcome back, {user.email}!
+              {user.email}
             </Text>
           </div>
-
-          <Button
-            variant="destructive"
-            size="lg"
-            onClick={handleLogout}
-            className="border-foreground shadow-md"
-          >
-            Logout →
-          </Button>
-        </div>
 
         {/* User Info Card */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
@@ -123,12 +151,14 @@ export default function DashboardPage() {
             <Card.Header className="border-b-2 border-foreground bg-primary/10">
               <Card.Title>Current Plan</Card.Title>
             </Card.Header>
-            <Card.Content className="pt-6">
-              <Badge variant="surface" className="shadow-md mb-4">
-                <span className="text-lg font-bold">
-                  {user.plan || "Free"} Plan
-                </span>
-              </Badge>
+            <Card.Content className="pt-6 space-y-4">
+              <div>
+                <Badge variant="surface" className="shadow-md">
+                  <span className="text-lg font-bold">
+                    {user.plan || "Free"} Plan
+                  </span>
+                </Badge>
+              </div>
               <Text as="p" className="text-sm text-muted-foreground">
                 Upgrade to get more storage and features
               </Text>
@@ -139,12 +169,14 @@ export default function DashboardPage() {
             <Card.Header className="border-b-2 border-foreground bg-accent/10">
               <Card.Title>Role</Card.Title>
             </Card.Header>
-            <Card.Content className="pt-6">
-              <Badge variant="surface" className="shadow-md mb-4">
-                <span className="text-lg font-bold">
-                  {user.role || "USER"}
-                </span>
-              </Badge>
+            <Card.Content className="pt-6 space-y-4">
+              <div>
+                <Badge variant="surface" className="shadow-md">
+                  <span className="text-lg font-bold">
+                    {user.role || "USER"}
+                  </span>
+                </Badge>
+              </div>
               <Text as="p" className="text-sm text-muted-foreground">
                 Your access level in the system
               </Text>
@@ -204,17 +236,6 @@ export default function DashboardPage() {
             </div>
           </Card.Content>
         </Card>
-
-        {/* Back to Home */}
-        <div className="text-center">
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => router.push("/")}
-            className="border-foreground shadow-md"
-          >
-            ← Back to Home
-          </Button>
         </div>
       </div>
     </div>
