@@ -64,41 +64,28 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Custom Header */}
+      {/* Minimal Header */}
       <header className="border-b-2 border-foreground bg-card sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center gap-4">
-              <div className="bg-primary border-2 border-foreground rounded px-4 py-2 shadow-md">
-                <Text as="h1" className="text-primary-foreground text-lg">
-                  Chloride 🧪
-                </Text>
-              </div>
-              <Badge variant="surface" size="sm" className="border-foreground">
-                Dashboard
-              </Badge>
-            </div>
-
-            {/* Nav Actions */}
-            <div className="flex items-center gap-3">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => router.push("/")}
-                className="border-foreground"
-              >
-                ← Home
-              </Button>
-              <Button
-                variant="destructive"
-                size="sm"
-                onClick={handleLogout}
-                className="border-foreground"
-              >
-                Logout
-              </Button>
-            </div>
+        <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-sm">Chloride</span>
+            <span className="text-xs text-muted-foreground">/</span>
+            <span className="text-sm text-muted-foreground">Dashboard</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => router.push("/")}
+              className="text-xs hover:underline text-muted-foreground"
+            >
+              Home
+            </button>
+            <span className="text-muted-foreground">|</span>
+            <button
+              onClick={handleLogout}
+              className="text-xs hover:underline text-destructive"
+            >
+              Logout
+            </button>
           </div>
         </div>
       </header>
