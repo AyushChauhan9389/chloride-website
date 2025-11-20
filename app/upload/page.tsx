@@ -219,7 +219,15 @@ export default function UploadPage() {
       </header>
 
       {/* Main Content */}
-      <div className="p-6">
+      <div className="p-6 relative overflow-hidden">
+        {/* Floating Background Elements */}
+        <div className="absolute top-24 left-16 w-24 h-24 bg-primary/10 border-2 border-primary rounded-full -z-10 animate-pulse" />
+        <div className="absolute top-48 right-10 w-28 h-28 bg-accent/10 border-2 border-accent rounded -z-10 rotate-6" />
+        <div className="absolute bottom-60 left-1/3 w-20 h-20 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
+        <div className="absolute bottom-24 right-1/4 w-32 h-32 bg-primary/5 border-2 border-primary/50 rounded -z-10 -rotate-12" />
+        <div className="absolute top-1/2 left-5 w-16 h-16 bg-accent/5 border-2 border-accent/50 rounded-full -z-10" />
+        <div className="absolute bottom-40 left-10 w-20 h-20 bg-secondary/5 border-2 border-secondary/50 rounded -z-10 rotate-45" />
+
         <div className="max-w-6xl mx-auto">
           {/* Page Title */}
           <div className="mb-8">

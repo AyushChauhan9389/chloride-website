@@ -135,7 +135,14 @@ export default function DashboardPage() {
       </header>
 
       {/* Main Content */}
-      <div className="p-6">
+      <div className="p-6 relative overflow-hidden">
+        {/* Floating Background Elements */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 border-2 border-primary rounded-full -z-10 animate-pulse" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-accent/10 border-2 border-accent rounded -z-10 rotate-12" />
+        <div className="absolute bottom-40 left-1/4 w-20 h-20 bg-secondary/10 border-2 border-secondary rounded-full -z-10" />
+        <div className="absolute bottom-20 right-10 w-36 h-36 bg-primary/5 border-2 border-primary/50 rounded -z-10 -rotate-6" />
+        <div className="absolute top-1/2 left-5 w-16 h-16 bg-accent/5 border-2 border-accent/50 rounded-full -z-10" />
+
         <div className="max-w-6xl mx-auto">
           {/* Welcome Section */}
           <div className="mb-8">
