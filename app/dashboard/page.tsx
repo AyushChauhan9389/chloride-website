@@ -185,7 +185,7 @@ export default function DashboardPage() {
                 variant="outline"
                 size="lg"
                 className="border-foreground h-auto py-4 flex flex-col items-center gap-2"
-                disabled
+                onClick={() => router.push("/upload")}
               >
                 <span className="text-2xl">📁</span>
                 <span>Upload Files</span>
