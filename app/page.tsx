@@ -11,11 +11,17 @@ import {
   TabsTrigger,
   TabsTriggerList,
 } from "@/components/retroui/Tab";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
 
   const copyToClipboard = (text: string, index: number) => {
     navigator.clipboard.writeText(text);
@@ -76,17 +82,30 @@ export default function Home() {
 
               <div className="w-px h-8 bg-foreground mx-1" />
 
-              <Button variant="outline" size="sm" className="border-foreground" asChild>
-                <Link href="/login">Sign In</Link>
-              </Button>
-              <Button
-                variant="default"
-                size="sm"
-                className="font-bold border-foreground"
-                asChild
-              >
-                <a href="/signup">Get Started →</a>
-              </Button>
+              {isLoggedIn ? (
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="font-bold border-foreground"
+                  asChild
+                >
+                  <Link href="/dashboard">Dashboard →</Link>
+                </Button>
+              ) : (
+                <>
+                  <Button variant="outline" size="sm" className="border-foreground" asChild>
+                    <Link href="/login">Sign In</Link>
+                  </Button>
+                  <Button
+                    variant="default"
+                    size="sm"
+                    className="font-bold border-foreground"
+                    asChild
+                  >
+                    <Link href="/signup">Get Started →</Link>
+                  </Button>
+                </>
+              )}
             </div>
 
             {/* Mobile Menu Button */}
