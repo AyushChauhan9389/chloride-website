@@ -76,7 +76,7 @@ export default function AdminPage() {
       setUser(parsedUser);
 
       // Check if user is admin
-      if (parsedUser.role !== "ADMIN") {
+      if (parsedUser.role?.toUpperCase() !== "ADMIN") {
         router.push("/dashboard");
         return;
       }
