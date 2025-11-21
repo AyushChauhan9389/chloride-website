@@ -257,15 +257,27 @@ export default function DashboardPage() {
                   <span>Analytics</span>
                 </Button>
 
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-foreground h-auto py-4 flex flex-col items-center gap-2"
-                  disabled
-                >
-                  <span className="text-2xl">🔗</span>
-                  <span>Short URLs</span>
-                </Button>
+                {user.role?.toUpperCase() === "ADMIN" ? (
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-foreground h-auto py-4 flex flex-col items-center gap-2 border-destructive"
+                    onClick={() => router.push("/admin")}
+                  >
+                    <span className="text-2xl">⚙️</span>
+                    <span>Admin Panel</span>
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-foreground h-auto py-4 flex flex-col items-center gap-2"
+                    disabled
+                  >
+                    <span className="text-2xl">🔗</span>
+                    <span>Short URLs</span>
+                  </Button>
+                )}
               </div>
             </Card.Content>
           </Card>
