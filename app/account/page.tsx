@@ -184,7 +184,7 @@ export default function AccountPage() {
             </Card.Header>
             <Card.Content className="pt-6">
               <Button
-                variant="destructive"
+                variant="default"
                 onClick={handleLogout}
                 className="border-foreground"
               >

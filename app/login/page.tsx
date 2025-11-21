@@ -169,7 +169,7 @@ export default function LoginPage() {
         {/* Footer Links */}
         <div className="mt-6 text-center space-y-2">
           <Link href="/">
-            <Text as="span" className="text-sm hover:underline cursor-pointer">
+            <Text className="text-sm hover:underline cursor-pointer">
               ← Back to Home
             </Text>
           </Link>
